@@ -5,88 +5,104 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    background-color: white;
     color: #333;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 2px solid #ccc;
+    position: relative;
 }
 
-header .logo h1 {
-    font-size: 2rem;
-    margin: 0;
-}
-
-nav ul {
-    list-style-type: none;
+.menu-icon {
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-nav ul li {
-    margin-left: 20px;
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
 }
 
-nav ul li a {
-    color: white;
+.logo h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    flex-grow: 1;
+    letter-spacing: 3px;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 3px solid #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    margin: 10px 0;
+}
+
+.menu ul li a {
     text-decoration: none;
-    font-size: 1rem;
+    color: #333;
+    font-size: 1.5rem;
 }
 
-section {
-    padding: 40px;
+.main-content {
+    padding: 50px;
     text-align: center;
 }
 
-section#home {
-    background-color: #f4f4f4;
+.welcome h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
-section#about {
-    background-color: #e2e2e2;
-}
-
-section#shop {
-    background-color: #d0d0d0;
-}
-
-section#contact {
-    background-color: #c0c0c0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form input, form textarea {
-    margin: 10px 0;
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+.welcome p {
+    font-size: 1.25rem;
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #f4f4f4;
     text-align: center;
-    padding: 10px;
+    padding: 10px 0;
+    border-top: 2px solid #ccc;
+}
+
+footer p {
+    color: #333;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    .menu ul li a {
+        font-size: 1.25rem;
+    }
+
+    .menu {
+        padding: 10px 0;
+    }
 }
